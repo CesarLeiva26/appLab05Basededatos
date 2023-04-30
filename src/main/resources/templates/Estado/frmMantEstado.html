@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<meta charset="UTF-8">
+<head th:insert="layout::head">
+</head>
+<body>
+	<nav th:insert="layout::menu"></nav>
+	<table class="table table-dark table-striped" >
+		<thead align="center">
+			<tr>
+				<th scope="col">Código</th>
+				<th scope="col">Nombre</th>
+
+			</tr>
+		</thead>
+		<tbody align="center">
+			<tr th:each="estado :${listaEstado}">
+				<td th:text="${estado.idestado}"></td>
+				<td th:text="${estado.descestado}"></td>
+			</tr>
+
+		</tbody>
+	</table>
+</body>
+</html>
